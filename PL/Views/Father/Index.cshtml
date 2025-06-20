@@ -1,0 +1,245 @@
+﻿@model IEnumerable<FatherViewModel>
+@{
+    ViewData["Title"] = "Father";
+}
+
+@* <section class="">
+    <a class="btn btn-outline-danger my-3" asp-action="Create">Add New Father <span class="font-weight-bolder"> : </span> <i class="fa-solid fa-address-card"></i></a>
+    <h1 class="text-danger">Fathers</h1>
+    @if (Model.Count() > 0)
+    {
+        @foreach (var entity in Model)
+        {
+
+             <div class="col-md-4  align-items-center ">
+    <div class="">
+    <div class="card">
+    <div class="card-img-overlay d-flex align-items-center justify-content-center overlay">
+    <a asp-action="Delete" asp-route-id="@entity.National_Father_Id" class="btn btn-light btn-circle"><i class="fa fa-trash"></i></a>
+    <a asp-action="Detielse" asp-route-id="@entity.National_Father_Id" class="btn btn-light btn-circle"><i class="fa fa-info-circle"></i></a>
+    <a asp-action="Edit" asp-route-id="@entity.National_Father_Id" class="btn btn-light btn-circle"><i class="fa fa-edit"></i></a>
+    </div>
+    <img src="~/Files/Fathers_Images/@entity.ImageName" class="card-img-top" alt="App 1">
+    <div class="card-body">
+    <h5 class="card-title text-center">@entity.Name</h5>
+    <p class="card-text text-center">@entity.National_Father_Id</p>
+    </div>
+    </div>
+    </div>
+
+    </div>  
+
+
+
+
+
+
+
+
+
+
+           
+        }
+    }
+    else
+    {
+        <h1 class="alert alert-danger">No Father</h1>
+    }
+</section>
+
+ *@
+
+
+
+
+
+
+
+<section class="">
+    <a class="btn btn-outline-danger my-3" asp-action="Create">Add New Father <span class="font-weight-bolder"> : </span> <i class="fa-solid fa-address-card"></i></a>
+    <h1 class="text-danger">Fathers</h1>
+    @if (Model.Count() > 0)
+    {
+        @foreach (var entity in Model)
+        {
+           
+               @*  <div class="col-md-4  align-items-center ">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-img-overlay d-flex align-items-center justify-content-center overlay">
+                                <a asp-action="Delete" asp-route-id="@entity.National_Father_Id" class="btn btn-light btn-circle"><i class="fa fa-trash"></i></a>
+                                <a asp-action="Detielse" asp-route-id="@entity.National_Father_Id" class="btn btn-light btn-circle"><i class="fa fa-info-circle"></i></a>
+                                <a asp-action="Edit" asp-route-id="@entity.National_Father_Id" class="btn btn-light btn-circle"><i class="fa fa-edit"></i></a>
+                            </div>
+                            <img src="~/Files/Fathers_Images/@entity.ImageName" class="card-img-top" alt="App 1">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">@entity.Name</h5>
+                                <p class="card-text text-center">@entity.National_Father_Id</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  *@
+
+
+
+
+
+
+
+
+
+
+    <!-- ----------------------------------------------------------------------------------------- -->
+
+    <!-- Father view model-->
+    <section class="vw-100 vh-75 d-flex justify-content-center align-items-center">
+                <div id="about" class="parent-section-2">
+                    <div class="container-section-2">
+                        <div class="parent-about">
+                            <div class="about-profile second-color">
+                                <div class="parent-photo">
+                                    <div class="parent-icon">
+                                        <div class="social-icon">
+                                            <ul>
+
+                                                <li class="m-2 text-danger "><a href="https://www.linkedin.com/signup"><i class="fa-brands fa-linkedin "></i></a></li>
+                                                <li class="m-2  text-danger"><a href="https://x.com/i/flow/login"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                                                <li class="m-2 text-danger"><a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzE4ODMzOTA1LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D&locale=en_GB"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img src="~/Files/Fathers_Images/@entity.ImageName" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <!--About -->
+
+                    <div class="content-section-2">
+                        <h2>Hello I am a father and my name is:<span class="text-danger"> @entity.Name </span>  <i class="fa-regular fa-face-smile text-info"></i></h2>
+                        <p>
+                            <span class=" font ">@entity.Nots</span>
+                        </p>
+
+                        <div class="about-profile-content">
+                            <ul class="list">
+                                <li><span>Name :</span> <span class="text-danger"> @entity.Name </span></li>
+                                <li><span>Address :</span> <span class="text-danger"> @entity.Address </span></li>
+                                <li><span>National Number :</span> <span class="text-danger"> @entity.National_Father_Id </span></li>
+                                <li><span>Date Of Birth :</span> @entity.DateOfBirth</li>
+                                @if (entity.Gender == true)
+                                {
+                                    <li><span>Gender:</span> Mail</li>
+                                }
+                                else
+                                {
+                                    <li><span>Gender:</span> Femail</li>
+                                }
+
+                                @if (entity.AliveOrNo == true)
+                                {
+                                    <li><span>Alive Or No :</span>  <span class="text-success">Alive</span></li>
+                                }
+                                else
+                                {
+                                    <li><span>Alive Or No :</span>  <span class="">Dead</span></li>
+
+
+                                }
+
+
+
+
+                                @if (entity.HomePhoneNumber is null)
+                                {
+                                    <li><span>Home Phone Number :</span> <span class="text-danger"> Null </span></li>
+
+                                }
+                                else
+                                {
+                                    <li><span>Home Phone Number :</span> <span class="text-danger"> @entity.HomePhoneNumber </span></li>
+
+                                }
+
+
+                                @if (entity.PhoneNumber1 is null)
+                                {
+                                    <li><span>Phone Number :</span> <span class="text-danger"> Null </span></li>
+
+                                }
+                                else
+                                {
+                                    <li><span>Phone Number :</span> <span class="text-danger"> @entity.PhoneNumber1 </span></li>
+
+                                }
+
+
+
+                                @if (entity.PhoneNumber2 is null)
+                                {
+                                    <li><span>Other Phone Number :</span> <span class="text-danger"> Null </span></li>
+
+                                }
+                                else
+                                {
+                                    <li><span>Other Phone Number :</span> <span class="text-danger"> @entity.PhoneNumber2 </span></li>
+
+                                }
+
+                            </ul>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="about-links">
+                            <a class="hire-me" asp-action="Detielse" asp-route-id="@entity.National_Father_Id">Details Heir : <i class="fa-solid fa-eye"></i></a>
+                            <a class="download" asp-action="Edit" asp-route-id="@entity.National_Father_Id">Edit Heir<i class="fa-solid fa-gears"></i></a>
+                            <a class="hire-me" asp-action="Delete" asp-route-id="@entity.National_Father_Id">Delete Heir<i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+    </section>
+    
+
+
+
+
+
+
+
+
+        }
+
+
+
+       
+
+       
+    }
+    else
+    {
+        <h1 class="alert alert-danger">No Father</h1>
+    }
+
+</section>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+﻿@model PersonsViewModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+
+
+<section class=" background-image height section  py-5 text-center d-flex align-items-center justify-content-center ">
+    <div class="background-image widthDetiles rounded shadow-lg the-continer box ">
+        <div class="row ">
+            <div class="col-md-4 mt-3 ShadowElement ">
+
+
+
+                <img src="~/Files/Chiledrens_Images/@Model.ImageName" class=" rounded-circle  overflow-hidden my-2 shadow-lg " width="280" height="280" alt="Chield" />
+                <div class="p-1">
+                    <h4 class="font-weight-bolder ">Name</h4>
+                    <p class="lead font-weight-bold text-danger ">@Model.Name </p>
+                </div>
+                <div class="p-1">
+                    <h4 class="font-weight-bolder">National number</h4>
+                    <p class="lead font-weight-bold text-danger ">@Model.NationalPerson_Id </p>
+                </div>
+
+
+
+                <div class="p-1">
+                    <h4 class="font-weight-bolder">Address</h4>
+                    <p class="lead font-weight-bold text-danger  ">@Model.Address </p>
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="col-md-8 mt-3  w-100 ">
+                <div class="hightNots  p-3">
+                    <h2 class="font-weight-bolder"> Nots </h2>
+                    <p class="lead ">@Model.Nots</p>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-4 text-left  mt-5 mx-5  ">
+
+                        <div class="p-1">
+                            <h3 class="font-weight-bolder">Father</h3>
+                            <p class="lead font-weight-bold text-danger ">@Model.Father.Name</p>
+                            <h3 class="font-weight-bolder">Mother</h3>
+                            <p class="lead font-weight-bold text-danger ">@Model.Mother.Name</p>
+                            <h5 class="font-weight-bolder">Home Phone Number </h5>
+                            <p class="lead font-weight-bold text-danger "><span>0</span>@Model.HomePhoneNumber</p>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-4 text-left mt-5 mx-5  ">
+                        <h3>Gender</h3>
+                        @if (Model.Gender == true)
+                        {
+                            <p> Is Male  <i class="fa-solid fa-child-reaching"></i></p>
+                        }
+                        else
+                        {
+                            <p> Is Female  <i class="fa-solid fa-child-dress"></i></p>
+
+                        }
+                        <h3>Is He Missing</h3>
+                        @if (Model.Is_he_missing == true)
+                        {
+                            <p class="text-danger font-weight-bolder"> Missing </p>
+
+                        }
+                        else
+                        {
+                            <p class=""> Not Missing </p>
+
+                        }
+                        <h3>Date Of Birth</h3>
+                        <p>@Model.DateOfBirth</p>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container py-5">
+                <a class="btn btn-outline-danger " asp-controller="Father" asp-action="Detielse" asp-route-id="@Model.National_Father_Id_FK">Father</a>
+                <a class="btn btn-outline-danger " asp-controller="Mother" asp-action="Details" asp-route-id="@Model.National_Mother_Id_FK">Mother</a>
+
+                <a class="btn btn-outline-danger m-2" asp-controller="Personal" asp-action="EditReportedChildren" asp-route-id="@Model.NationalPerson_Id">Report Children</a>
+            
+            </div>
+        </div>
+</section>
+

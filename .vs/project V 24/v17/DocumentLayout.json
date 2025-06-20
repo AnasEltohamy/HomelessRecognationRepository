@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|d:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project v 24\\project v 24\\pl\\views\\father\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|solutionrelative:pl\\views\\father\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|d:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project v 24\\project v 24\\pl\\views\\personal\\reportedchildren.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|solutionrelative:pl\\views\\personal\\reportedchildren.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|d:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project v 24\\project v 24\\pl\\views\\personal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|solutionrelative:pl\\views\\personal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|d:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project v 24\\project v 24\\pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|solutionrelative:pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|d:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project v 24\\project v 24\\pl\\views\\mother\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1FBD82C1-33CE-4FEE-AB0E-6A974340F1C9}|PL\\PL.csproj|solutionrelative:pl\\views\\mother\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportedChildren.cshtml",
+              "DocumentMoniker": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Personal\\ReportedChildren.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Personal\\ReportedChildren.cshtml",
+              "ToolTip": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Personal\\ReportedChildren.cshtml",
+              "RelativeToolTip": "PL\\Views\\Personal\\ReportedChildren.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAACEAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T02:40:47.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Father\\Index.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Father\\Index.cshtml",
+              "ToolTip": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Father\\Index.cshtml",
+              "RelativeToolTip": "PL\\Views\\Father\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T02:37:01.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Mother\\Index.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Mother\\Index.cshtml",
+              "ToolTip": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Mother\\Index.cshtml",
+              "RelativeToolTip": "PL\\Views\\Mother\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T02:36:38.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Personal\\Index.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Personal\\Index.cshtml",
+              "ToolTip": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Personal\\Index.cshtml",
+              "RelativeToolTip": "PL\\Views\\Personal\\Index.cshtml",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAAIIAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T02:35:48.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PL\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062A\u062E\u0631\u062C\\00\\project V 24\\project V 24\\PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PL\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABEAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T02:33:54.445Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

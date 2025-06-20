@@ -1,0 +1,291 @@
+﻿@model IQueryable<PersonsViewModel>
+@{
+    ViewData["Title"] = "Reported Children";
+}
+
+
+@* 
+<section class="container">
+
+    <h1 class="my-3">Reported Children</h1>
+    @if (Model.Count() > 0)
+    {
+        <div class="d-flex"></div>
+        @foreach (var entity in Model)
+        {
+            if (entity.Is_he_missing == true)
+            {
+                <div class="three-d-card ">
+                    <div class="card-wrapper ">
+                        <div class="card-face front  shadowRed ">
+                            <div class="card-content ">
+                                <img src="~/Files/Chiledrens_Images/@entity.ImageName" alt="" style="height: 144px; width: 144px; border-radius: 75px; margin-top: -11px;">
+                                <div class="card-title">@entity.Name <span>@entity.Father.Name</span></div>
+                                <div class="card-description">@entity.NationalPerson_Id</div>
+                                <p>@entity.Address</p>
+
+                            </div>
+                        </div>
+                        <div class="card-face  back front shadowRed">
+                            <div class="card-content">
+                                <img src="~/Files/Chiledrens_Images/@entity.ImageName" alt="" style="height: 144px; width: 144px; border-radius: 75px; margin-top: -11px; ">
+                                <div class="card-title text-red">@entity.Name <span>@entity.Father.Name</span></div>
+                                <p class="i " style="color: rgb(255, 46, 81);">@entity.NationalPerson_Id</p>
+
+
+                                <div class="card-description m-1">
+                                    <div class="column">
+                                        <p>@entity.Mother.Name</p>
+                                    </div>
+                                    <div class="column">
+
+                                        @if (entity.Gender == true)
+                                        {
+                                            <p> mail </p>
+                                        }
+                                        else
+                                        {
+                                            <p> femail </p>
+                                        }
+
+                                        <p class="m-1">@entity.HomePhoneNumber</p>
+                                    </div>
+                                    <div class="column">
+                                        @if (entity.Is_he_missing == true)
+                                        {
+                                            <p class="text-danger"> missing </p>
+                                        }
+                                        else
+                                        {
+                                            <p> NotMissing </p>
+                                        }
+                                    </div>
+                                </div>
+
+
+                                <div class="button-group ">
+                                    <button class="bt  ">
+                                        <a class="" asp-action="Detielse" asp-route-id="@entity.NationalPerson_Id">Detiels</a>
+
+                                    </button>
+                                    <button class="bt  ">
+                                        <a class="" asp-action="Edit" asp-route-id="@entity.NationalPerson_Id">Edit</a>
+                                    </button>
+                                    <button class="bt ">
+                                        <a class="" asp-action="Delete" asp-route-id="@entity.NationalPerson_Id">Delete</a>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+    else
+    {
+        <h1 class="alert alert-danger">No Reported Children</h1>
+    }
+</section>
+
+ *@
+
+
+
+
+
+
+
+<section class="">
+    <h1 class="mt-4 text-danger">Reported Children</h1>
+    @if (Model.Count() > 0)
+    {
+        @foreach (var entity in Model)
+        {
+            <!-- ----------------------------------------------------------------------------------------- -->
+            <!-- Father view model-->
+            <section class="vw-100 vh-75 d-flex justify-content-center align-items-center">
+                <div id="about" class="parent-section-2">
+                    <div class="container-section-2">
+                        <div class="parent-about">
+                            <div class="about-profile ford-coler">
+                                <div class="parent-photo">
+                                    <div class="parent-icon">
+                                        <div class="social-icon">
+                                            <ul>
+                                                <li class="m-2 text-white ">
+                                                    <a class="btn btn-outline-danger " asp-controller="Father" asp-action="Detielse" asp-route-id="@entity.Father.National_Father_Id">Father</a>
+                                                </li>
+                                                <li class="m-2 text-white ">
+                                                    <a class="btn btn-outline-danger " asp-controller="Mother" asp-action="Details" asp-route-id="@entity.Mother.National_Mother_Id">Mother</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <img src="~/Files/Chiledrens_Images/@entity.ImageName" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+
+                    <!--About -->
+
+                    <div class="content-section-2">
+                        <h2>Hello I am a son and my name is:<span class="text-danger"> @entity.Name </span>  <i class="fa-regular fa-face-smile text-info"></i></h2>
+                        <p>
+                            <span class=" font ">@entity.Nots</span>
+                        </p>
+                        <div class="about-profile-content">
+                            <ul class="list">
+                                <li><span>Name :</span> <span class="text-danger"> @entity.Name <span class="text-danger">@entity.Father.Name</span> </span></li>
+                                <li><span>Mother Name :</span> <span class="text-danger"> @entity.Mother.Name </span></li>
+                                <li><span>National number Id :</span> <span class="text-danger"> @entity.NationalPerson_Id </span></li>
+                                <li><span>Address :</span> <span class="text-danger"> @entity.Address </span></li>
+                                <li><span>Home Phone Number :</span> <span class="text-danger"> @entity.HomePhoneNumber </span></li>
+
+                                @if (entity.Gender == true)
+                                {
+                                    <li><span>Gender:</span> Mail</li>
+                                }
+                                else
+                                {
+                                    <li><span>Gender:</span> Femail</li>
+                                }
+                                @if (entity.Is_he_missing == true)
+                                {
+                                    <li><span>Is He Missing :</span><i class="fa-solid fa-circle-check text-danger"></i></li>
+                                }
+                                else
+                                {
+                                    <li><span>Is He Missing :</span><i class="fa-solid fa-circle-xmark"></i></li>
+                                }
+
+                                <li><span>DateOfBirth :</span> @entity.DateOfBirth</li>
+
+
+                            </ul>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="about-links">
+                            <a class="hire-me" asp-action="Detielse" asp-route-id="@entity.NationalPerson_Id">Detielse Heir<i class="fa-solid fa-eye"></i></a>
+                            <a class="download" asp-action="EditReportedChildren" asp-route-id="@entity.NationalPerson_Id">Edit Heir<i class="fa-solid fa-gears"></i></a>
+                            <a class="hire-me" asp-action="Delete" asp-route-id="@entity.NationalPerson_Id">Delete Heir<i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </section>
+        }
+    }
+    else
+    {
+        <h1 class="alert alert-danger">No Son</h1>
+    }
+</section>
+
+
+
+
+
+
+
+
+
+
+ @* 
+
+<section class="container">
+
+    <h1 class="my-3">Reported Children</h1>
+    @if (Model.Count() > 0)
+    {
+        <div class="d-flex"></div>
+        @foreach (var entity in Model)
+        {
+            if (entity.Is_he_missing == true)
+            {
+                <div class="three-d-card ">
+                    <div class="card-wrapper ">
+                        <div class="card-face front  shadowRed ">
+                            <div class="card-content ">
+                                <img src="~/Files/Chiledrens_Images/@entity.ImageName" alt="" style="height: 144px; width: 144px; border-radius: 75px; margin-top: -11px;">
+                                <div class="card-title">@entity.Name <span>@entity.Father.Name</span></div>
+                                <div class="card-description">@entity.NationalPerson_Id</div>
+                                <p>@entity.Address</p>
+
+                            </div>
+                        </div>
+                        <div class="card-face  back front shadowRed">
+                            <div class="card-content">
+                                <img src="~/Files/Chiledrens_Images/@entity.ImageName" alt="" style="height: 144px; width: 144px; border-radius: 75px; margin-top: -11px; ">
+                                <div class="card-title text-red">@entity.Name <span>@entity.Father.Name</span></div>
+                                <p class="i " style="color: rgb(255, 46, 81);">@entity.NationalPerson_Id</p>
+
+
+                                <div class="card-description m-1">
+                                    <div class="column">
+                                        <p>@entity.Mother.Name</p>
+                                    </div>
+                                    <div class="column">
+
+                                        @if (entity.Gender == true)
+                                        {
+                                            <p> mail </p>
+                                        }
+                                        else
+                                        {
+                                            <p> femail </p>
+                                        }
+
+                                        <p class="m-1">@entity.HomePhoneNumber</p>
+                                    </div>
+                                    <div class="column">
+                                        @if (entity.Is_he_missing == true)
+                                        {
+                                            <p class="text-danger"> missing </p>
+                                        }
+                                        else
+                                        {
+                                            <p> NotMissing </p>
+                                        }
+                                    </div>
+                                </div>
+
+
+                                <div class="button-group ">
+                                    <button class="bt  ">
+                                        <a class="" asp-action="Detielse" asp-route-id="@entity.NationalPerson_Id">Detiels</a>
+
+                                    </button>
+                                    <button class="bt  ">
+                                        <a class="" asp-action="Edit" asp-route-id="@entity.NationalPerson_Id">Edit</a>
+                                    </button>
+                                    <button class="bt ">
+                                        <a class="" asp-action="Delete" asp-route-id="@entity.NationalPerson_Id">Delete</a>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+
+
+
+
+
+     
+    }
+    else
+    {
+        <h1 class="alert alert-danger">No Reported Children</h1>
+    }
+
+
+
+</section> *@
